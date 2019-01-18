@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchSerchBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.SearchBookMainController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="572.0" fitWidth="708.0" layoutY="-3.0" opacity="0.5">
+         <image>
+            <Image url="@../../../Gui/src/application/חיפוש.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="SearchBookLabel" layoutX="26.0" layoutY="14.0" prefHeight="36.0" prefWidth="204.0" text="Search a Book :" textFill="#140606" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="25.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="49.0" layoutY="47.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="428.0">
+         <columnConstraints>
+            <ColumnConstraints fx:id="GridPane" halignment="LEFT" hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="153.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="275.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="90.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <RadioButton fx:id="ByNameLabel" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#ByNameLabelHandler" prefHeight="22.0" prefWidth="143.0" text="by Book Name :" textFill="#140606">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Search" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="ByAuthorLabel" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#ByAuthorLabelHandler" prefHeight="22.0" prefWidth="115.0" text="by Author :" textFill="#140606" toggleGroup="$Search" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="ByGenreLabel" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#ByGenreLabelHandler" prefHeight="22.0" prefWidth="114.0" text="by Genre :" textFill="#140606" toggleGroup="$Search" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="ByTextLabel" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#ByTextLabelHandler" prefHeight="22.0" prefWidth="109.0" text="by Text :" textFill="#140606" toggleGroup="$Search" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Calibri Bold" size="16.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="ByNameTextField" prefHeight="25.0" prefWidth="280.0" promptText="enter book name" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="ByAuthorTextField" prefHeight="25.0" prefWidth="140.0" promptText="enter Author" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="ByTextTExtField" prefHeight="61.0" prefWidth="289.0" promptText="enter free text" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+            <TextField fx:id="ByGenreTextField" prefHeight="25.0" prefWidth="140.0" promptText="enter Genre" style="-fx-background-color: #f8f8f8;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial Italic" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow color="#cdbdbd" />
+               </effect>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button fx:id="Clearbnt" layoutX="392.0" layoutY="232.0" mnemonicParsing="false" onAction="#ClearHandler" prefHeight="36.0" prefWidth="85.0" text="Clear">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="Searchbnt" layoutX="204.0" layoutY="234.0" mnemonicParsing="false" onAction="#SearchHandler" prefHeight="33.0" prefWidth="85.0" text="Search">
+         <font>
+            <Font name="Calibri Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="Tableview" layoutX="10.0" layoutY="286.0" prefHeight="264.0" prefWidth="681.0">
+         <columns>
+            <TableColumn fx:id="Title" prefWidth="88.0" text="Title" />
+            <TableColumn fx:id="Genre" prefWidth="78.0" text="Genre" />
+            <TableColumn fx:id="Author" prefWidth="100.0" text="Author" />
+            <TableColumn fx:id="Description" prefWidth="283.0" text="Description" />
+            <TableColumn fx:id="tableofcontents" prefWidth="131.0" text="table of contents" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

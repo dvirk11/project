@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchSerchBook" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.BooksearchResultsController">
+   <children>
+      <ImageView fx:id="Image" fitHeight="400.0" fitWidth="537.0" layoutX="-6.0" opacity="0.5">
+         <image>
+            <Image url="@../../../Gui/src/application/חיפוש.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="Tableview" layoutX="6.0" layoutY="80.0" prefHeight="264.0" prefWidth="520.0">
+        <columns>
+          <TableColumn fx:id="Title" prefWidth="83.0" text="Title" />
+          <TableColumn fx:id="Genre" prefWidth="67.0" text="Genre" />
+            <TableColumn fx:id="Author" prefWidth="92.0" text="Author" />
+            <TableColumn fx:id="Description" prefWidth="136.0" text="Description" />
+            <TableColumn fx:id="tableofcontents" prefWidth="133.0" text="table of contents" />
+        </columns>
+      </TableView>
+      <Label fx:id="SearchBookresultsLabel" layoutX="26.0" layoutY="14.0" prefHeight="36.0" prefWidth="251.0" text="Search  Book results :" textFill="#140606" underline="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
